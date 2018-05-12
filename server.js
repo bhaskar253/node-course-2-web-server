@@ -40,14 +40,6 @@ app.get('/*', function(req, res, next){
   next();
 });
 app.get('/', (req,res) => {
-  // res.send('<h1>Hello Express!</h1>');
-  // res.send({
-  //   name:"Andrew",
-  //   likes:[
-  //     'Biking',
-  //     'Cities'
-  //   ]
-  // });
   res.render('home.hbs',{
     pageTitle: 'Home Page',
     welcomeMessage: 'Welcome to the best website of the year!!'
@@ -56,6 +48,11 @@ app.get('/', (req,res) => {
 app.get('/about',(req,res)=>{
   res.render('about.hbs',{
     pageTitle: 'About Page'
+  });
+});
+app.get('/projects',(req,res)=>{
+  res.render('projects.hbs',{
+    pageTitle: 'Projects Page'
   });
 });
 app.get('/bad', (req,res)=>{
